@@ -1,170 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Family Assessment Newsletter</title>
+  <meta charset="UTF-8">
+  <title>Document Viewer</title>
   <style>
-    :root {
-      --primary: #ffffff;
-      --secondary: #cce6ff;
-      --accent: #ffcce6;
-      --text: #333;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
+    html, body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--primary);
-      color: var(--text);
-      line-height: 1.7;
-      padding: 2rem 1rem;
-      max-width: 800px;
-      margin-inline: auto;
+      padding: 0;
+      height: 100%;
     }
-
-    header {
-      text-align: center;
-      padding-bottom: 1.5rem;
-      border-bottom: 2px solid var(--secondary);
-      margin-bottom: 2rem;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      color: black;
-    }
-
-section {
-  margin-bottom: 3rem;
-  opacity: 0;
-  transform: scale(0.98) translateY(40px);
-  transition: all 0.7s ease-out;
-  will-change: transform, opacity;
-}
-
-section.visible {
-  opacity: 1;
-  transform: scale(1) translateY(0);
-}
-
-    section h2 {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-      color: skyblue;
-    }
-
-    ul, ol {
-      padding-left: 1.2rem;
-    }
-
-    a {
-      color: #0066cc;
-      text-decoration: underline;
-      word-break: break-word;
-    }
-
-    @media (max-width: 600px) {
-      body {
-        padding: 1rem;
-      }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Family Assessment Newsletter</h1>
-  </header>
 
-  <section>
-    <h2>🧠 Understanding Assessments: What Families Need to Know</h2>
-    <p>In our classroom, we use different types of assessments to better understand your child’s needs and celebrate their growth:</p>
-    <ul>
-      <li><strong>Diagnostic Assessments (at the start):</strong> Know what your child already understands and where we begin instruction.</li>
-      <li><strong>Formative Assessments (during learning):</strong> Small checks (activities, observations, or quizzes) guide teaching day-by-day.</li>
-      <li><strong>Summative Assessments (at the end):</strong> Show what your child has learned, like unit tests or projects.</li>
-    </ul>
-  </section>
+  <!-- Replace with your actual document path -->
+  <iframe src="Atypical_Development_First_Grade-Oswalt.pdf"></iframe>
 
-  <section>
-    <h2>📚 How We Align Assessments with Standards</h2>
-    <p>Our assessments meet English Language Proficiency (ELP) Standards and content area standards (math, science, reading) to support English growth and subject learning together.</p>
-  </section>
-
-  <section>
-    <h2>🧩 How Assessment Guides Teaching</h2>
-    <p>Assessment results help us:</p>
-    <ul>
-      <li>Choose better words, visuals, and examples.</li>
-      <li>Plan activities that fit student levels.</li>
-      <li>Offer extra help (intervention) or extra challenges (enrichment).</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>📊 State Assessments and Student Progress</h2>
-    <p>State tests measure English skills and subject knowledge. We use results to track progress and plan future support.</p>
-  </section>
-
-  <section>
-    <h2>⚖️ Accommodations for English Learners</h2>
-    <p>We ensure fairness for ELs by offering:</p>
-    <ul>
-      <li>Extra time</li>
-      <li>Simpler English instructions</li>
-      <li>Bilingual dictionaries</li>
-      <li>Read-aloud directions</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>🪞 Helping Students Reflect on Their Learning</h2>
-    <p>We help students think about their progress by:</p>
-    <ol>
-      <li><strong>Exit Tickets</strong> — Students write or draw one thing they learned.</li>
-      <li><strong>Self-Checklists</strong> — Students check off skills they feel confident about.</li>
-    </ol>
-  </section>
-
-  <section>
-    <h2>💬 Communication is Key!</h2>
-    <p>How we stay connected:</p>
-    <ul>
-      <li><strong>Weekly Updates</strong> — Newsletters and class apps (translated when possible!)</li>
-      <li><strong>Parent-Teacher Conferences</strong> — Interpreters provided if needed.</li>
-      <li><strong>Celebration Notes</strong> — Positive notes about achievements!</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>📞 Contact Information</h2>
-    <p>Thank you for being a partner in your child’s success! Questions? Feel free to email me or call the school office for help in your language!</p>
-  </section>
-
-  
-  <script>
-    // Scroll effect for sections
-    const sections = document.querySelectorAll("section");
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
-        });
-      },
-      {
-        threshold: 0.1
-      }
-    );
-    sections.forEach(section => {
-      observer.observe(section);
-    });
-  </script>
 </body>
 </html>
