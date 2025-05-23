@@ -1,25 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Atypical Development</title>
   <style>
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
-      height: 100%;
+      padding: 2rem 0;
+      background: #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: sans-serif;
     }
-    iframe {
+
+    .page {
       width: 100%;
-      height: 100%;
-      border: none;
+      max-width: 816px; /* 8.5 inches * 96dpi */
+      aspect-ratio: 8.5 / 11;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      background-color: white;
+    }
+
+    .page1 { background-image: url('img1.jpg'); }
+    .page2 { background-image: url('img2.jpg'); }
+    .page3 { background-image: url('img3.jpg'); }
+    .page4 { background-image: url('img4.jpg'); }
+
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+      .page {
+        box-shadow: none;
+        margin-bottom: 0;
+        page-break-after: always;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Replace with your actual document path -->
-  <iframe src="Atypical_Development_First_Grade-Oswalt.pdf"></iframe>
+  <div class="page page1"></div>
+  <div class="page page2"></div>
+  <div class="page page3"></div>
+  <div class="page page4"></div>
 
 </body>
 </html>
